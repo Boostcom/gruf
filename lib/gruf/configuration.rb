@@ -28,6 +28,8 @@ module Gruf
       hook_options: {},
       default_client_host: '',
       use_ssl: false,
+      ssl_crt: '',
+      ssl_key: '',
       ssl_crt_file: '',
       ssl_key_file: '',
       servers_path: '',

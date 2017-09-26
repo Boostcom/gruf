@@ -186,6 +186,9 @@ Gruf.configure do |c|
   c.use_ssl = true
   c.ssl_crt_file = "#{Rails.root}/config/ssl/#{Rails.env}.crt"
   c.ssl_key_file = "#{Rails.root}/config/ssl/#{Rails.env}.key"
+  # OR
+  c.ssl_crt = "x509 public certificate here"
+  c.ssl_key = "x509 private certificate here"
 end
 ```
 

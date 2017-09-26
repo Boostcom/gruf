@@ -98,8 +98,8 @@ module Gruf
     # :nocov:
     def ssl_credentials
       if Gruf.use_ssl
-        private_key = File.read Gruf.ssl_key_file
-        cert_chain = File.read Gruf.ssl_crt_file
+        private_key = Gruf.ssl_key.presence || File.read(Gruf.ssl_key_file)
+        cert_chain = Gruf.ssl_crt.presence || File.read(Gruf.ssl_crt_file)
         certs = [nil, [{ private_key: private_key, cert_chain: cert_chain }], false]
         GRPC::Core::ServerCredentials.new(*certs)
       else
