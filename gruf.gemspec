@@ -33,8 +33,6 @@ Gem::Specification.new do |spec|
   spec.executables   << 'gruf'
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '~> 2.4'
-
   spec.add_development_dependency 'bundler', '~> 1.11'
   spec.add_development_dependency 'bundler-audit', '>= 0.6'
   spec.add_development_dependency 'factory_bot', (Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('2.5') ? '>= 6.1' : '~> 5.2')
